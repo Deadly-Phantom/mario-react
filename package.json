@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "mario-react 0.0.1 - supercharged with Vitron (by Blade)",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "tristan",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "prettier --write .",
