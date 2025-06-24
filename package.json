@@ -1,7 +1,7 @@
 {
   "name": "mario-react",
   "productName": "mario-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mario-react 0.0.1 - supercharged with Vitron (by Blade)",
   "main": "./out/main/index.js",
   "author": "tristan",

@@ -59,7 +59,11 @@ jobs:
         # os: [ubuntu-latest, windows-latest]
         include:
           - os: macos-latest
-            OSNAME: mac
+            OSNAME: mac-silicon
+            OSEND: dmg
+            FILEPART: Installer
+          - os: macos-13
+            OSNAME: mac-intel
             OSEND: dmg
             FILEPART: Installer
           - os: ubuntu-latest
