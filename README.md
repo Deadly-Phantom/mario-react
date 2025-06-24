@@ -2,8 +2,6 @@
 
 A proof-of-concept classic platformer game built with a modern hybrid stack, combining the power of React for the UI and Phaser for the core game engine. This project is bundled into a cross-platform desktop app using Electron and Vite (via the `vitron` scaffold).
 
-![CI/CD Status](https://github.com/<your-username>/<your-repo-name>/actions/workflows/create-app-release.yml/badge.svg)
-![Web Deploy Status](https://github.com/<your-username>/<your-repo-name>/actions/workflows/create-web-release.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-0.0.1-brightgreen)
 
