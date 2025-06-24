@@ -77,7 +77,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   // The callback for when a player collects a coin
-  private collectCoin(player: Phaser.Types.Physics.Arcade.GameObjectWithBody, coin: Phaser.Types.Physics.Arcade.GameObjectWithBody) {
+  private collectCoin(_player: Phaser.Types.Physics.Arcade.GameObjectWithBody, coin: Phaser.Types.Physics.Arcade.GameObjectWithBody) {
     const c = coin as Phaser.Physics.Arcade.Sprite;
     c.disableBody(true, true);
 
