@@ -1,5 +1,7 @@
 # Mario React-Phaser 🍄
 
+**[▶ Play in the browser](https://deadly-phantom.github.io/mario-react/)**
+
 A proof-of-concept classic platformer game built with a modern hybrid stack, combining the power of React for the UI and Phaser for the core game engine. This project is bundled into a cross-platform desktop app using Electron and Vite (via the `vitron` scaffold).
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -36,12 +38,14 @@ The project maintains a clean separation of concerns between the game logic and 
 
 ```
 src
-├── components/ # React components (PhaserGame.tsx, GameUI.tsx)
-├── game/ # All Phaser-related code
-│ └── scenes/ # Phaser Scenes (e.g., GameScene.ts)
-├── stores/ # Zustand state stores (e.g., useGameStore.ts)
-├── App.tsx # Main React application component
-└── main.tsx # React entry point
+├── main/                 # Electron main process
+├── preload/              # Electron preload bridge
+└── renderer/src/
+    ├── components/       # React components (PhaserGame.tsx, GameUI.tsx)
+    ├── game/scenes/      # Phaser scenes (GameScene.ts)
+    ├── store/            # Zustand stores (useGameStore.ts bridges Phaser ↔ React)
+    ├── App.tsx           # Main React application component
+    └── main.tsx          # React entry point
 ```
 
 ## 🚀 Getting Started
@@ -56,8 +60,8 @@ src
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/<your-username>/<your-repo-name>.git
-    cd <your-repo-name>
+    git clone https://github.com/Deadly-Phantom/mario-react.git
+    cd mario-react
     ```
 
 2.  **Install dependencies:**
@@ -95,13 +99,16 @@ yarn dist
 
 The distributable files (e.g., .exe, .dmg, .AppImage) will be created in the dist directory.
 
+## 🔁 CI
+
+Commit-message prefixes trigger the GitHub Actions workflows:
+
+- `web: ...` builds the web version and deploys it to GitHub Pages.
+- `Release ...` builds desktop installers for Windows, macOS and Linux and attaches them
+  to a GitHub release.
+
 ## 📄 License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-**Important:** Remember to replace the following placeholders in the file:
-
-- `<your-username>`: Your GitHub username.
-- `<your-repo-name>`: The name of this repository.
-
-Let me know if this format works better for you
+MIT. See [LICENSE](LICENSE). The project is built on the
+[Vitron](https://github.com/YeonV/vitron) Electron + Vite + React scaffold, whose
+original MIT notice is kept in the license file.
